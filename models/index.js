@@ -1,6 +1,5 @@
-const m1 = require('./m1');
-const m2 = require('./m2');
-const m3 = require('./m3')
+const Blog = require('./blog.js');
+const User = require('./user.js');
 
 // https://sequelize.org/master/index.html
 
@@ -16,4 +15,4 @@ const m3 = require('./m3')
 // m1.belongsToMany(m2, { through: 'm3' });
 // m2.belongsToMany(m1, { through: 'm3' }); 
 
-module.exports = { m1, m2, m3 };
+module.exports = { User, Blog };
