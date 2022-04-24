@@ -1,3 +1,5 @@
+// const { Blog, User } = require('../../models');
+
 const newFormHandler = async (event) => {
     event.preventDefault();
     console.log("newFormHandler running line 3");
@@ -38,12 +40,8 @@ const newFormHandler = async (event) => {
       }
     }
   };
-  
-  document
-    .getElementById('create-new-blog')
-    .addEventListener('click', newFormHandler);
-  
-  // document
-  //   .getElementById('delete-blog')
-  //   .addEventListener('click', delButtonHandler);
+
+document.getElementById('create-new-blog').addEventListener('click', newFormHandler);
+document.getElementById('delete-blog').addEventListener('click', delButtonHandler);
+
   

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome!</h2>
+    <h2>Welcome {{user.name}}!</h2>
   </div>
 </div>
 
@@ -23,24 +23,16 @@
     </form>
   </div>
 
-  {{#if blog.length}}
-  <div class="col-md-6 project-list">
-    <h3>My Posts:</h3>
-
-    {{#each blog}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{blog.id}}">{{blog.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}" id="delete-blog">DELETE</button>
-      </div>
-    </div>
+  <div>
+    <h3>My Blog Posts:</h3>
+    {{#each blogs}}
+      {{>profile-post}}
     {{/each}}
   </div>
-  {{/if}}
+
 </div>
+
+<script src="/js/materialize.js"></script>
 
 <script src="./js/userprofile.js"></script>
 
-<script src="/js/materialize.js"></script>

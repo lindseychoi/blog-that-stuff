@@ -27,34 +27,37 @@ router.get('/userprofile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     console.log(user);
-    
-  res.render('userprofile', {
-    user,
-    loggin_in: true
-  })
-    } catch (err) {
-      res.status(500).json(err);
-    }
+
+    const blogData = await Blog.findAll({
+      include: [{model: User}],
+    });
+
+    //make the data readable by looping through the array and making it readable
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));
+
+    res.render('userprofile', {
+      user,
+      blogs,
+      loggin_in: true
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //get all blogs from the blogData.json and join with user data
-router.get('/', async (req, res) => {
+router.get('/homepage', async (req, res) => {
+  console.log("homepage working");
     try {
         const blogData = await Blog.findAll({
-        include: [
-          {
-          model: User,
-          attributes: ['name'],
-          },
-        ],
+        include: [{model: User}],
     });
     
     //make the data readable by looping through the array and making it readable
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
-    res.render('login', { 
-      blogs, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', { 
+      blogs
     });
   } catch (err) {
     res.status(500).json(err);
