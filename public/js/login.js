@@ -25,10 +25,6 @@ const loginFormHandler = async (event) => {
     }
   };
 
-const logoutFormHandler = async (event) => {
-  event.preventDefault();
-}
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -51,8 +47,6 @@ const signupFormHandler = async (event) => {
   }
 };
 
-
 document.getElementById('loginbtn').addEventListener('click', loginFormHandler);
-document.getElementById('logoutbtn').addEventListener('click', logoutFormHandler);
 document.getElementById('newUserBtn').addEventListener('click', signupFormHandler);
 

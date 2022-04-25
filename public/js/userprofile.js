@@ -1,5 +1,3 @@
-// const { Blog, User } = require('../../models');
-
 const newFormHandler = async (event) => {
     event.preventDefault();
     console.log("newFormHandler running line 3");
@@ -20,7 +18,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/userprofile');
       } else {
-        alert('Failed to create project');
+        alert('Failed to create blog post');
       }
     }
   };
@@ -28,7 +26,6 @@ const newFormHandler = async (event) => {
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
-  
       const response = await fetch(`/api/blogs/${id}`, {
         method: 'DELETE',
       });
@@ -36,7 +33,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/userprofile');
       } else {
-        alert('Failed to delete project');
+        alert('Failed to delete blog post.');
       }
     }
   };
