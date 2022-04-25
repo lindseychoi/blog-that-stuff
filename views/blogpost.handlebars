@@ -1,6 +1,6 @@
 
 <div>
-    <h3>My Post:</h3>
+    <h3>Post:</h3>
     <div class="row">
         <div class="col s12 m6">
             <div class="card">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-action teal lighten-2">
                     <a href="#" id="reply" class="white-text" data-id="{{this.id}}">Reply</a>
-                    <a class="right-align white-text">posted by user {{this.user_id}}</a>
+                    <a class="right-align white-text">posted by {{user.name}} @ {{format_date this.date_created}}</a>
                 </div>
             </div>
         </div>
@@ -19,4 +19,4 @@
 </div>
 
 <script src="/js/materialize.js"></script>
-
+<script src="/js/help.js"></script>
