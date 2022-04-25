@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
+    <div class="col s12 m6 blog-list">
+        <div class="card">
             <div class="card-content">
-                <span class="card-title">{{this.name}}</span>
+                <a class="card-title black-text" href="/blog/{{this.id}}">{{this.name}}</a>
                 <p>{{this.description}}</p>
             </div>
             <div class="card-action teal lighten-2">
-                <a href="#">Reply</a>
-                <a href="#" id="delete-blog" data-id="{{this.id}}">Delete</a>
+                <a href="#" id="delete-blog" class="white-text" data-id="{{this.id}}">Delete</a>
+                <a class="right-align white-text">posted by user {{this.user_id}}</a>
             </div>
         </div>
     </div>

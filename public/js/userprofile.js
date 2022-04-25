@@ -39,6 +39,7 @@ const newFormHandler = async (event) => {
   };
 
 document.getElementById('create-new-blog').addEventListener('click', newFormHandler);
-document.getElementById('delete-blog').addEventListener('click', delButtonHandler);
+// document.getElementById('delete-blog').addEventListener('click', delButtonHandler);
+document.querySelector('.blog-list').addEventListener('click', delButtonHandler);
 
   
