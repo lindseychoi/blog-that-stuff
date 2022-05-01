@@ -10,8 +10,6 @@ This is a general blog that allows users to log on and make blog posts. Users ca
 
 [Usage](#usage)
 
-[Dependencies, Libraries, and Tools](#dependencies,libraries,andtools)
-
 [Contact Me](#contactme)
 
 ## Screenshots
@@ -45,7 +43,7 @@ From the deployed page, you can click on Login or Sign Up to access the blog. Wh
 
 ## Contact Me
 
-* **Lindsey Choi** 
+**Lindsey Choi** 
 
     email: lindsey.e.choi@gmail.com
         
