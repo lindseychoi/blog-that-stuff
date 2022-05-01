@@ -2,3 +2,8 @@
     background-color: whitesmoke;
 }
 
+nav {
+    font-size: 25px;
+    flex-direction: column;
+}
+    

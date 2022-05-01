@@ -5,7 +5,7 @@ const logout = async () => {
     });
     console.log("logout function activate");
     if (response.ok) {
-      document.location.replace('/login');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }

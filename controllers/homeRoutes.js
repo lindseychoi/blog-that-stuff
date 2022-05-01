@@ -22,17 +22,19 @@ router.get('/userprofile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] }
+      attributes: { exclude: ['password'] },
+      include: [{ model: Blog }],
     });
 
     const user = userData.get({ plain: true });
     console.log(user);
 
     const blogData = await Blog.findAll({
+      where: {user_id: req.session.user_id},
       include: [{model: User}],
     });
 
-    //make the data readable by looping through the array and making it readable
+    // make the data readable by looping through the array and making it readable
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     res.render('userprofile', {
