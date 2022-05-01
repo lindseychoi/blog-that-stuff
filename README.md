@@ -3,6 +3,8 @@
 ## Description
 This is a general blog that allows users to log on and make blog posts. Users can also see the posts of other users who use the blog on the homepage. Their individual posts are available to them on their profile page. In the future, other users will be able to respond and make comments on the posts on the homepage as well.
 
+## Deployed Site: https://that-blog.herokuapp.com/
+
 ## Table of Contents
 [Screenshots](#screenshots)
 
